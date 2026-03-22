@@ -20,7 +20,7 @@ jobs:
           distribution: 'temurin'
 
       - name: setup gradlew
-        uses: gradle/actions/setup-gradlew@v3
+        uses: gradle/actions/setup-gradle@v3
 
       - name: build and run tests
         run: ./gradlew clean build test jacocoTestReport --stacktrace
