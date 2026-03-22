@@ -34,9 +34,3 @@ jobs:
             build/reports/tests/
             build/reports/jacoco
           retention-days: 5
-
-      - name: deploy coverage
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build/reports/jacoco/test/html
