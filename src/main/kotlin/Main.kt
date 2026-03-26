@@ -2,10 +2,11 @@ package org.example
 
 import org.example.trigonometry.*
 import org.example.logarithm.*
+import org.example.util.CSVGraphWriter
 
 object Main {
 
-    private var outputDir: String =
+    private val outputDir =
         System.getProperty("user.dir") + File.separator + "plots" + File.separator
 
     private const val START = -10.0
@@ -14,10 +15,7 @@ object Main {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        generateFunctionData()
-    }
 
-    private fun generateFunctionData() {
         CSVGraphWriter(Sine(), outputDir).write(START, END, STEP)
         CSVGraphWriter(Cosine(), outputDir).write(START, END, STEP)
         CSVGraphWriter(Secant(), outputDir).write(START, END, STEP)

@@ -13,9 +13,9 @@ class EquationSystem (
     private val log3: BaseNLogarithm = BaseNLogarithm(3.0),
     private val log5: BaseNLogarithm = BaseNLogarithm(5.0),
     private val log10: BaseNLogarithm = BaseNLogarithm(10.0)
-) {
+) : Function {
 
-    private fun calculate(x: Double): Double {
+    override fun calculate(x: Double): Double {
         if (x <= 0.0) {
             return calculateTrig(x)
         } else {
